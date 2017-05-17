@@ -1,0 +1,22 @@
+package Reciclagem;
+
+public class Principal {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		Menu mn = new Menu();
+		// TODO Auto-generated method stub		
+		//Game_Screen gs = new Game_Screen();
+		//Lixo lx = new Lixo();
+        //System.out.println("O objeto é orgânico? R: sim/não");
+	    //String resposta = sc.next();
+		//Papel pl = new Papel("Filipe", "esqueci", true, false);
+		//PerguntasTipoDoLixo ptl = new PerguntasTipoDoLixo();		
+		//ptl.PerguntasTipoDoLixo();
+		mn.MenuTabela();
+		
+	}
+
+}

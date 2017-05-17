@@ -1,0 +1,232 @@
+package Reciclagem;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class PerguntasTipoDoLixo {
+	ArrayList<Papel> ppArray = new ArrayList();
+	ArrayList<Metal> mtArray = new ArrayList();
+	ArrayList<Plastico> ptArray = new ArrayList();
+	ArrayList<Vidro> vdrArray = new ArrayList();
+	ArrayList<Organico> orgArray = new ArrayList();
+	
+	Scanner sc = new Scanner(System.in);
+	Papel pp = new Papel("","", false, false);
+	Metal mt = new Metal("","", false, false);
+	Plastico pt = new Plastico("", "", false, false);
+	Vidro vdr = new Vidro("", "", false, false);
+	Organico org = new Organico("", "", false, false);
+	int i=0;
+	
+	public void PerguntasTipoDoLixo(){
+		System.out.println("O lixo é: \npapel \nvidro\nplastico\nmetal \norganico");
+		
+			String tipo = sc.next();			
+			if(tipo.equalsIgnoreCase("Papel")){
+				
+				System.out.println("Qual o nome do objeto reconhecido como lixo?");
+				String nome = sc.next();
+				System.out.println("\n");
+				//if (nome != ""){
+					System.out.println("O objeto é reciclavel? R: Sim/Não");
+					String reciclavelString = sc.next();
+					if(reciclavelString.equalsIgnoreCase("Sim")){
+						boolean reciclavel = true;
+							//Papel(nome, tipo, reciclavel, false);
+						
+							pp.setNome(nome);
+							pp.setTipo(tipo);
+							pp.setOrganico(false);
+							pp.setReciclavel(reciclavel);
+							ppArray.add(pp);
+							
+							System.out.println("Você reciclou o objeto "+ ppArray.get(0).getNome() +" Parabéns");
+					}else if(reciclavelString.equalsIgnoreCase("Não")){
+						boolean reciclavel = false;
+						pp.setNome(nome);
+						pp.setTipo(tipo);
+						pp.setOrganico(false);
+						pp.setReciclavel(reciclavel);
+						ppArray.add(pp);
+						System.out.println("Você informou que o objeto não é reciclavel");
+					}else{
+						System.out.println("Esta resposta não é aceitável, limite-se para: Sim/Não");
+					}
+				//}
+		}
+			else if(tipo.equalsIgnoreCase("Metal")){
+				System.out.println("Qual o nome do objeto reconhecido como lixo?");
+				String nome = sc.next();
+				System.out.println("O objeto é reciclavel? R: Sim/Não");
+				String reciclavelString = sc.next();
+					if(reciclavelString.equalsIgnoreCase("Sim")){
+						boolean reciclavel = true;
+							//Papel(nome, tipo, reciclavel, false);
+							mt.setNome(nome);
+							mt.setTipo(tipo);
+							mt.setOrganico(false);
+							mt.setReciclavel(reciclavel);
+							mtArray.add(mt);
+							System.out.println("Você reciclou o objeto "+ mt.getNome()+ " Parabéns");
+					}else if(reciclavelString.equalsIgnoreCase("Não")){
+						boolean reciclavel = false;
+						mt.setNome(nome);
+						mt.setTipo(tipo);
+						mt.setOrganico(false);
+						mt.setReciclavel(reciclavel);
+						mtArray.add(mt);
+						System.out.println("Você informou que o objeto não é reciclavel");
+					}else{
+						System.out.println("Esta resposta não é aceitável, limite-se para: Sim/Não");
+					}
+		}
+			else if(tipo.equalsIgnoreCase("Plastico")){
+				System.out.println("Qual o nome do objeto reconhecido como lixo?");
+				String nome = sc.next();
+				System.out.println("O objeto é reciclavel? R: Sim/Não");
+				String reciclavelString = sc.next();
+					if(reciclavelString.equalsIgnoreCase("Sim")){
+						boolean reciclavel = true;
+							//Papel(nome, tipo, reciclavel, false);
+							pt.setNome(nome);
+							pt.setTipo(tipo);
+							pt.setOrganico(false);
+							pt.setReciclavel(reciclavel);
+							ptArray.add(pt);
+							System.out.println("Você reciclou o objeto "+ pt.getNome()+ " Parabéns");
+					}else if(reciclavelString.equalsIgnoreCase("Não")){
+						boolean reciclavel = false;
+						pt.setNome(nome);
+						pt.setTipo(tipo);
+						pt.setOrganico(false);
+						pt.setReciclavel(reciclavel);
+						ptArray.add(pt);
+						System.out.println("Você informou que o objeto não é reciclavel");
+					}else{
+						System.out.println("Esta resposta não é aceitável, limite-se para: Sim/Não");
+					}
+		}
+			else if(tipo.equalsIgnoreCase("Vidro")){
+				System.out.println("Qual o nome do objeto reconhecido como lixo?");
+				String nome = sc.next();
+				System.out.println("O objeto é reciclavel? R: Sim/Não");
+				String reciclavelString = sc.next();
+					if(reciclavelString.equalsIgnoreCase("Sim")){
+						boolean reciclavel = true;
+							//Papel(nome, tipo, reciclavel, false);
+							vdr.setNome(nome);
+							vdr.setTipo(tipo);
+							vdr.setOrganico(false);
+							vdr.setReciclavel(reciclavel);
+							vdrArray.add(vdr);
+							System.out.println("Você reciclou o objeto "+ vdr.getNome()+ " Parabéns");
+					}else if(reciclavelString.equalsIgnoreCase("Não")){
+						boolean reciclavel = false;
+						vdr.setNome(nome);
+						vdr.setTipo(tipo);
+						vdr.setOrganico(false);
+						vdr.setReciclavel(reciclavel);
+						vdrArray.add(vdr);
+						System.out.println("Você informou que o objeto "+ vdr.getNome() +" não é reciclavel");
+					}else{
+						System.out.println("Esta resposta não é aceitável, limite-se para: Sim/Não");
+					}
+		}
+			else if(tipo.equalsIgnoreCase("Organico")){
+				do{
+					System.out.println("Qual o nome do objeto reconhecido como lixo?");
+					String nome = sc.next();
+				
+					//for(int e=0; e < orgArray.size(); e++ ){
+					boolean reciclavel = false;
+					org.setNome(nome);
+					org.setTipo(tipo);
+					org.setOrganico(true);
+					org.setReciclavel(reciclavel);
+					//orgArray.set(i, org).setNome(nome);
+					//orgArray.set(i, org).setTipo(tipo);
+					//orgArray.set(i, org).setOrganico(true);
+					//orgArray.set(i, org).setReciclavel(reciclavel);
+					orgArray.add(org);
+					//orgArray.set(i, org).setNome(nome);
+					//int n= orgArray.size();
+				
+					
+					System.out.println("O objeto "+ orgArray.get(0).getNome() +" não é reciclavel!");
+					
+					System.out.println("O objeto "+ orgArray.get(i).getNome() +" não é reciclavel!");
+					//System.out.println("O objeto é do tipo"+ orgArray.get(0).getTipo());
+					i++;
+				}while((i < orgArray.size()));
+				
+			}else{
+				System.out.println("Opção inválida");
+			}
+	}
+	public void verLixo(int opcao3){
+	  	
+		if (opcao3 == 1){
+			pp.getNome();
+			pp.getTipo();
+			pp.getOrganico();
+			pp.getReciclavel();
+		}
+		else if (opcao3 ==2){
+			
+		}
+		else if (opcao3 ==3){
+			
+		}
+		else if (opcao3 ==4){
+			
+		}
+		else if (opcao3 ==5){
+			
+			
+			boolean respostaO = org.getOrganico();
+			boolean respostaR = org.getReciclavel();
+			String respostaOrg = "";
+			String respostaRec = "";
+			if(respostaO == true){
+				respostaOrg = "Sim";
+					if(respostaR == true){
+							respostaRec = "Sim";
+							System.out.println("Nome do objeto: "+ org.getNome()+
+											"\nTipo do objeto: "+ org.getTipo()+
+											"\nÉ organico? "+ respostaOrg+
+											"\nÉ reciclável? "+ respostaRec);
+					}
+					else{
+								respostaRec = "Não";
+								System.out.println("Nome do objeto: "+ org.getNome()+
+								"\nTipo do objeto: "+ org.getTipo()+
+								"\nÉ organico? "+ respostaOrg+
+								"\nÉ reciclável? "+ respostaRec);
+			}
+			}else{
+				respostaOrg = "Não";
+				if(respostaR == true){
+					respostaRec = "Sim";
+					System.out.println("Nome do objeto: "+ org.getNome()+
+									"\nTipo do objeto: "+ org.getTipo()+
+									"\nÉ organico? "+ respostaOrg+
+									"\nÉ reciclável? "+ respostaRec);
+				}
+				else{
+						respostaRec = "Não";
+						System.out.println("Nome do objeto: "+ org.getNome()+
+						"\nTipo do objeto: "+ org.getTipo()+
+						"\nÉ organico? "+ respostaOrg+
+						"\nÉ reciclável? "+ respostaRec);
+			}
+			}
+		//else if (opcao3 ==0){
+			//System.out.println("");
+		//}
+		//}else{
+			//System.out.println("Opção inválida!");
+		//}
+	 }
+	}
+	
+}

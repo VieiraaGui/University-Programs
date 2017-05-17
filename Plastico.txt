@@ -1,0 +1,11 @@
+package Reciclagem;
+
+public class Plastico extends Lixo {
+
+	Plastico(String nome, String tipo, boolean reciclavel, boolean organico) {
+		super(nome, tipo, reciclavel, organico); //construtor de Lixo
+		
+	}
+		
+		
+}

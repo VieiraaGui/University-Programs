@@ -1,0 +1,91 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Reciclagem;
+import java.awt.Component;
+import java.awt.Dimension;
+import java.awt.Panel;
+import java.awt.Toolkit;
+import java.awt.event.*;
+import javax.swing.*;
+
+
+/**
+ *
+ * @author danie
+ */
+
+public class Game_Screen extends JFrame{
+
+    private JMenuBar menBarPrincipal;
+    private JMenu menCadastro;
+    private JMenuItem menItemAlunos;
+    private JMenuItem menItemProfessor;
+    private JMenu menFerramentas;
+    private JMenuItem menItemSair;
+    private JPanel panel1;
+    
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	//public static void main(String[] args) {
+	//}
+    //private JMenu menCadastro;
+    //private JMenuItem menItemAluno;
+    //private JMenuItem menItemProfessor;
+			
+			public Game_Screen(){
+                            menu1();
+                        }
+                        private void menu1()
+                        {
+                        	//Component texto = "Olá programador!";
+                            //instanciar
+                          menBarPrincipal = new JMenuBar();
+                          menCadastro = new JMenu("Cadastros");
+                          menItemAlunos = new JMenuItem("Aluno");
+                          menItemProfessor = new JMenuItem("Professor");
+                          menFerramentas = new JMenu("Ações");
+                          menItemSair = new JMenuItem("Sair");
+                          panel1 = new JPanel();
+                          
+                            //menCadastro.add((Action) menItemAlunos);
+                            //menCadastro.add((Action) menItemProfessor);
+                            
+                            menFerramentas.add(menItemSair);
+                            
+                            menBarPrincipal.add(menCadastro);
+                            menBarPrincipal.add(menFerramentas);
+                            menCadastro.add(menItemAlunos);
+                            menCadastro.add(menItemProfessor);
+                            this.setJMenuBar(menBarPrincipal);
+                            menItemSair.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e){ System.exit(0); } });
+                            
+                            
+                            setTitle("Game Bio");
+                            setSize(500,400);
+                            Toolkit kit = Toolkit.getDefaultToolkit();
+                            Dimension tamanhoTela = kit.getScreenSize();
+                            int height = tamanhoTela.height;
+                            int width = tamanhoTela.width;
+                            //this.setLocation(width/2, height/2);
+                            setLocationRelativeTo(null);
+                            //RefineryUtilities.centerFrameOnScreen(null);
+                            
+                            setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                            setResizable(true);
+                            setVisible(true);
+		    
+                            //this.getContentPane().add(texto);
+                          //  JOptionPane.showMessageDialog(rootPane, "TEXTO", "TÍTULO", JOptionPane.ERROR_MESSAGE, null);
+			}
+
+   
+		
+
+	}
+

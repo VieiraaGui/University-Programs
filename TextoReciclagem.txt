@@ -1,0 +1,26 @@
+package Reciclagem;
+
+public class TextoReciclagem {
+	 String papel = "O papel é um material constituído por elementos fibrosos de origem vegetal, geralmente distribuído sob a forma de folhas ou rolos.\n Tal material é feito a partir de uma espécie de pasta desses elementos fibrosos, secada sob a forma de folhas, que por sua vez são frequentemente utilizadas para:\n escrever, desenhar, imprimir, embalar, etc.\n Do ponto de vista químico, o papel se constitui basicamente de ligações de hidrogênio.",
+			 plastico = "Em química e tecnologia, os plásticos são materiais orgânicos poliméricos sintéticos, de constituição macromolecular, dotada de grande maleabilidade \n(que apresentam a propriedade de adaptar-se em distintas formas), facilmente transformável mediante o emprego de calor e pressão, e que serve de matéria-prima para a fabricação dos mais variados objetos:\n vasos, sacola, toalhas, embalagens, cortinas, bijuterias, carrocerias, roupas, sapatos.",
+			 vidro = "A Reciclagem do vidro é o processo pelo qual o vidro é reaproveitado para criar novos materiais, o processo se dá basicamente derretendo o vidro para sua reutilização.\n Dependendo da finalidade do seu uso, pode ser necessário separá-lo em cores diferentes.",
+			 organico = "Lixo orgânico é todo resíduo de origem vegetal ou animal, ou seja, todo lixo originário de um ser vivo.\n Este tipo de lixo é produzido nas residências, escolas, empresas e pela natureza.",
+			 metal = "Em Química um metal, do grego antigo métalon pode ser chamado de várias maneiras:\n pode ser um elemento, uma substância ou uma liga metálica caracterizado pela sua boa condutividade térmica e elétrica, geralmente apresentando uma cor prateada ou amarelada, e uma elevada dureza.\n Qualquer metal pode ser definido também como um elemento químico que forma aglomerados de átomos com caráter metálico.";
+	 
+	 public String getPapel(){
+		 return papel;
+	 }
+	 
+	 public String getPlastico(){
+		 return plastico;
+	 }
+	 public String getVidro(){
+		 return vidro;
+	 }
+	 public String getOrganico(){
+		 return organico;
+	 }
+	 public String getMetal(){
+		 return metal;
+	 }
+}

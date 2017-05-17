@@ -1,0 +1,90 @@
+package Reciclagem;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+abstract public class Lixo {
+		//private ArrayList[,] ListObjeto = new ArrayList[" " ""];
+		//private ArrayList[] nome = new ArrayList[50];
+		//private ArrayList[] tipo = new ArrayList[50];
+		private String nome, tipo;
+		private Boolean reciclavel, organico;
+		//String resposta = "Sim";
+	    //Scanner sc = new Scanner(System.in);
+
+	public String getNome(){
+		return nome;
+	}
+	public void setNome(String nome){
+		this.nome = nome;
+	}
+
+	public String getTipo(){
+		return tipo;
+	}
+
+	public void setTipo(String tipo){
+		this.tipo = tipo;
+	}
+
+	public Boolean getReciclavel(){
+		return reciclavel;
+	}
+
+	public void setReciclavel(Boolean reciclavel){
+		this.reciclavel = reciclavel;
+	}
+	public boolean getOrganico(){
+		return organico;
+	}
+	public void setOrganico(boolean organico){
+		this.organico = organico;
+	}
+	
+	 
+	 public Lixo(String nome, String tipo, boolean reciclavel, boolean organico){
+		 	this.nome = nome;
+		 	this.tipo = tipo;
+		 	this.reciclavel = reciclavel;
+		 	this.organico = organico;
+		 	//System.out.println("O objeto é orgânico? R: sim/não");
+		 			/*this.resposta = sc.next();
+		 			//this.resposta = resposta;
+		 			if (this.resposta.equalsIgnoreCase("sim")) {
+		 				//boolean organico = true;
+		 					setOrganico(organico);
+		 					System.out.println("O objeto é orgânico!!!");
+		   
+		 			} 
+		 			else if(this.resposta.equalsIgnoreCase("não")) {
+		 				//boolean organico = false;
+		 				setOrganico(organico);	
+		 				System.out.println("Qual o tipo do objeto? R: vidro/plastico/metal/papel");
+		 				resposta = sc.next();
+		 			if (resposta.equalsIgnoreCase("vidro") || resposta.equalsIgnoreCase("plastico") || resposta.equalsIgnoreCase("metal") || resposta.equalsIgnoreCase("papel")) {
+						tipo = resposta;
+						setTipo(tipo);	
+						System.out.println("O objeto é reciclável? R: sim/não");
+						resposta = sc.next();
+							if (resposta.equalsIgnoreCase("Sim")) {
+									reciclavel = true;
+									setReciclavel(reciclavel);
+									System.out.println("Estado reciclavel alojado no objeto!");
+							} 
+									else if(resposta.equalsIgnoreCase("Não")) {
+										reciclavel = false;
+									setReciclavel(reciclavel);	
+									System.out.println("Estado não reciclavel alojado no objeto!");
+							}else{
+									System.out.println("Resposta inválida!");
+							}
+		 			}else{
+		 					System.out.println("Resposta inválida!");
+		 			} 
+		   
+		 			}else{
+		 					System.out.println("Resposta inválida!");
+		 			} */
+	 }
+}
+

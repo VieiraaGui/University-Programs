@@ -1,0 +1,83 @@
+package Reciclagem;
+import java.util.*;
+
+public class Menu {
+		int opcao;
+		TextoReciclagem tr = new TextoReciclagem();
+		Scanner sc = new Scanner(System.in);
+		PerguntasTipoDoLixo ptl = new PerguntasTipoDoLixo();
+		
+		
+		
+	public void MenuTabela(){
+		do{	
+		System.out.println("Escolha o número de uma das opções abaixo \n" +
+							"1-Reciclar\n"+
+							"2-Texto autoexplicativo\n"+
+							"3-Verificar objetos reciclados\n"+
+							"0-Sair");
+			String alojar;
+			alojar = sc.next();
+			
+			opcao = Integer.parseInt(alojar); 
+			switch (opcao){
+				case 1:
+					ptl.PerguntasTipoDoLixo();
+					break;
+				case 2:
+					int opcao2;
+					String alojar2;
+					do{
+						
+					System.out.println("Escolha o número de uma das opções abaixo \n"+
+										"1-Papel \n"+
+										"2-Metal \n"+
+										"3-Plastico \n"+
+										"4-Vidro \n"+
+										"5-Organico \n"+
+										"0-Sair");
+						alojar2 = sc.next();
+						opcao2 = Integer.parseInt(alojar2);  
+						if(opcao2 == 1){
+							System.out.println(tr.getPapel());;
+						}else if(opcao2 ==2){
+							System.out.println(tr.getMetal());
+						}else if(opcao2 ==3){
+							System.out.println(tr.getPlastico());
+						}else if(opcao2 ==4){
+							System.out.println(tr.getVidro());
+						}else if(opcao2 ==5){
+							System.out.println(tr.getOrganico());
+						}else if(opcao2 ==0){
+							System.out.println("Programa encerrado");
+						}else {
+							System.out.println("Opção inválida!");
+						}
+						
+					}while(opcao2 != 0);
+					break;
+				case 3:
+					int opcao3=0;
+					do{	
+						System.out.println("Escolha o número de uma das opções abaixo \n"+
+								"1-Ver Papel \n"+
+								"2-Ver Metal \n"+
+								"3-Ver Plastico \n"+
+								"4-Ver Vidro \n"+
+								"5-Ver Organico \n"+
+								"0-Sair");
+						opcao3 = sc.nextInt();
+					
+						ptl.verLixo(opcao3);
+					}while(opcao3 != 0);		
+					break;
+					
+				case 0:
+						System.out.println("Programa encerrado!");
+					break;
+				default:
+						System.out.println("Esta opção não é válida");
+			}
+		}while (opcao != 0);
+	}
+}
